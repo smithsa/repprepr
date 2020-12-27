@@ -8,7 +8,7 @@ title: Routines
     {% assign routines = site.routines %}
     {% for routine in  site.routines %}
        <div class="col-12 routine">
-            <a href="{{ routine.url }}">
+            <a href="{{site.baseurl}}{{ routine.url }}">
                 {{ routine.name }}
             </a>
        </div>
