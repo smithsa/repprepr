@@ -7,7 +7,6 @@ exercises:
    -  name: Standing Hamstring Stretch
       duration: 50
       image_path: false
-      mirror: true
       image_url: https://media.self.com/photos/5a305db96c2fc24013a0aa78/master/w_1600%2Cc_limit/2_1Self.jpg
       notes: >-
          Stand tall with your feet hip-width apart, knees slightly bent, arms by your sides.
@@ -17,12 +16,14 @@ exercises:
 
          Stretches neck, back, glutes, hamstrings, calves
    -  name: Piriformis Stretch
+      mirror: true
       duration: 50
       image_path: false
       image_url: https://media.self.com/photos/5a305b5a83ab3f54feacf748/master/w_1600%2Cc_limit/2_13self.jpg
       notes: >-
          Stretches hips, back, glutes
    -  name: Lunge With Spinal Twist
+      mirror: true
       duration: 50
       image_path: false
       image_url: https://media.self.com/photos/5a305b43e1ef6d3e6b8801bf/master/w_1600%2Cc_limit/2_7self.jpg
@@ -38,6 +39,7 @@ exercises:
 
          Stretches hip flexors, quads, back
    -  name: Triceps Stretch
+      mirror: true
       duration: 50
       image_path: false
       image_url: https://media.self.com/photos/5a305dbce1ef6d3e6b8801c5/master/w_1600%2Cc_limit/2_10self.jpg
@@ -50,6 +52,7 @@ exercises:
 
          Stretches neck, shoulders, back, triceps
    -  name: Figure Four Stretch
+      mirror: true
       duration: 50
       image_path: false
       image_url: https://media.self.com/photos/5a305ae99bddcf5b219b2c5b/master/w_1600%2Cc_limit/2_16self.jpg
@@ -63,6 +66,7 @@ exercises:
 
          Stretches hips, glutes, lower back, hamstrings
    -  name: 90/90 Stretch
+      mirror: true
       duration: 50
       image_path: false
       image_url: https://media.self.com/photos/5a305cc84669415cf908fb45/master/w_1600%2Cc_limit/2_24self.jpg
@@ -95,6 +99,7 @@ exercises:
 
          Do this for 3 seconds, and then release. Repeat 5 to 10 times.
    -  name: Side Bend Stretch
+      mirror: true
       duration: 50
       image_path: false
       image_url: https://media.self.com/photos/5a305bd6e1ef6d3e6b8801c1/master/w_1600%2Cc_limit/2_14self.jpg
@@ -106,6 +111,7 @@ exercises:
 
          Stretches groin, hips, inner thigh, obliques
    -  name: Knee to Chest Stretch
+      mirror: true
       duration: 50
       image_path: false
       image_url: https://media.self.com/photos/5a305c1883ab3f54feacf74a/master/w_1600%2Cc_limit/2_32self.jpg
@@ -117,6 +123,7 @@ exercises:
 
          Stretches lower back, hips, hamstrings
    -  name: Lying Quad Stretch
+      mirror: true
       duration: 50
       image_path: false
       image_url: https://media.self.com/photos/5a305b5a83ab3f54feacf748/master/w_1600%2Cc_limit/2_13self.jpg
@@ -153,6 +160,7 @@ exercises:
 
          Stretches back, shoulders, glutes
    -  name: Standing Quad Stretch
+      mirror: true
       duration: 50
       image_path: false
       image_url: https://media.self.com/photos/5a305dd383ab3f54feacf754/master/w_1600%2Cc_limit/2_2Self.jpg
