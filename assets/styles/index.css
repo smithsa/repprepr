@@ -2,6 +2,10 @@ html, body {
 	background: #f7f1e3;
 }
 
+body {
+	padding-bottom: 60px;
+}
+
 .carousel {
 	width: 450px;
 	position: relative;
