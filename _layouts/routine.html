@@ -40,6 +40,23 @@ layout: routine
                             <p>{{exercise.notes}}</p>
                         </div>
                     </div>
+
+                    {% if exercise.mirror %}
+                        <div class="carousel-item mirror"  data-duration="{{exercise.duration}}" data-order="{{exerciseOrder}}">
+                            <div class="img-wrapper">
+                                {% if exercise.image_path %}
+                                    <img src="{{site.baseurl}}/assets/images/exercises/{{exercise.image_path}}" class="d-block w-100" alt="...">
+                                {% else %}
+                                    <img src="{{exercise.image_url}}" />
+                                {% endif %}
+                                <span class="routine-progress">{{ currentIndex }}/{{ page.exercises.size }}</p>
+                            </div>
+                            <div class="description">
+                                <h3>{{exercise.name}}</h3>
+                                <p>{{exercise.notes}}</p>
+                            </div>
+                        </div>
+                    {% endif %}
                     <div class="carousel-item" data-duration="{{page.rest}}" data-order="{{exerciseOrder | plus: 1}}">
                         <div class="rest d-flex align-items-center justify-content-center">
                           {% if currentHumanReadableIndex == page.exercises.size %}

@@ -7,6 +7,7 @@ exercises:
    -  name: Standing Hamstring Stretch
       duration: 50
       image_path: false
+      mirror: true
       image_url: https://media.self.com/photos/5a305db96c2fc24013a0aa78/master/w_1600%2Cc_limit/2_1Self.jpg
       notes: >-
          Stand tall with your feet hip-width apart, knees slightly bent, arms by your sides.
