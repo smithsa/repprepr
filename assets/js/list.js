@@ -1,0 +1,1 @@
+var doc = jsyaml.load('greeting: hello\nname: world');

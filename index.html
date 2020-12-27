@@ -1,0 +1,17 @@
+---
+layout: default
+title: Routines
+---
+
+
+<div class="routines">
+    {% assign routines = site.routines %}
+    {% for routine in  site.routines %}
+       <div class="col-12 routine">
+            <a href="{{ routine.url }}">
+                {{ routine.name }}
+            </a>
+       </div>
+    {% endfor %}
+</div>
+
