@@ -57,6 +57,16 @@ body {
 	position: relative;
 }
 
+.img-wrapper[data-has-image=false]{
+	min-height: 420px;
+	background: #3B3B98;
+	color:#ffffff;
+	text-transform: uppercase;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
 .carousel.paused .carousel-item .img-wrapper::after {
 	content: "Play";
 	font-size: 72px;

@@ -16,7 +16,7 @@ $( document ).ready(function() {
 
 
 	// pause functionality
-	$(".carousel img").on("click", function() {
+	$(".carousel .img-wrapper").on("click", function() {
 		IS_PAUSED = !IS_PAUSED;
 		IS_PAUSED ? EXERCISE_CAROUSEL.addClass("paused") : EXERCISE_CAROUSEL.removeClass("paused");
 	});
