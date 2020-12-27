@@ -22,8 +22,8 @@ title: repPrepr
 email: smithsade13@gmail.com 
 description: >- # this means to ignore newlines until "baseurl:"
   App that helps you create exercises and has a workout timer.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/repprepr" # the subpath of your site, e.g. /blog
+url: "https://smithsa.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 
 
 # Build settings
