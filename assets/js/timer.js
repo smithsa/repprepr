@@ -5,7 +5,7 @@ var currentCarouselDurationCount;
 var IS_PAUSED = true;
 var IS_RESTARTED = false;
 var endingExerciseAudio = new Audio("./../assets/audio/gong.wav");
-
+var currentTimerInterval;
 
 EXERCISE_CAROUSEL.carousel({
   interval: false
@@ -30,6 +30,13 @@ $( document ).ready(function() {
 	$("#btn__start").on("click", function() {
 		IS_PAUSED = false;
 		$(this).remove();
+	});
+
+	//skip button
+	$("#skip-exercise").on("click", function() {
+		clearInterval (currentTimerInterval);
+		IS_PAUSED = false;
+		EXERCISE_CAROUSEL.carousel('next');
 	});
 
 	// run the timer
@@ -59,7 +66,7 @@ function getCurrentExerciseAttribute(attr) {
 }
 
 function startExerciseCountDown(exerciseSecondsPassed, exerciseDurationInSeconds) {
-	var timerInterval = setInterval(function(){ 
+	currentTimerInterval = setInterval(function(){ 
 
 		if (IS_RESTARTED) {
 			exerciseSecondsPassed = 0;
@@ -74,7 +81,7 @@ function startExerciseCountDown(exerciseSecondsPassed, exerciseDurationInSeconds
 
 		// stop the interval timer
 		if (exerciseSecondsPassed == exerciseDurationInSeconds) {
-			clearInterval (timerInterval);
+			clearInterval (currentTimerInterval);
 			endingExerciseAudio.play();
 			// navigate to the next slide and start new countdown
 			var nextSlideTimeout = setTimeout(function(){ 

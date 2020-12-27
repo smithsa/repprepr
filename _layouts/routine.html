@@ -10,18 +10,7 @@ layout: routine
     <div class="row h-100 d-flex align-items-center justify-content-center">
         <div class="col col-12 d-flex align-items-center justify-content-center pb-4">
             <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                <ol class="carousel-indicators">
-                    {% assign sizeOfExercises = page.exercises.size %}
-                    {% assign adjustedSizeOfExercises = sizeOfExercises | times: 2 %}
-                    {% assign adjustedSizeOfExercises = adjustedSizeOfExercises | plus: 1 %}
-                    {% for i in (1..adjustedSizeOfExercises) %}
-                        {% if i == 1 %}
-                            <li data-target="#carouselExampleIndicators" class="active"></li>
-                        {% else %}
-                            <li data-target="#carouselExampleIndicators"></li>    
-                        {% endif %}
-                    {% endfor %}
-               </ol>
+
                 <div class="carousel-inner">
 
             
@@ -33,7 +22,8 @@ layout: routine
                 </div>
     
                 
-                {% assign exerciseOrder = 1 %}
+                {% assign currentIndex = 1 %}
+                {% assign exerciseIndex = 1 %}
                 {% assign currentHumanReadableIndex = 1 %}
                 {% for exercise in page.exercises %}
                     <div class="carousel-item"  data-duration="{{exercise.duration}}" data-order="{{exerciseOrder}}">
@@ -43,6 +33,7 @@ layout: routine
                             {% else %}
                                 <img src="{{exercise.image_url}}" />
                             {% endif %}
+                            <span class="routine-progress">{{ currentIndex }}/{{ page.exercises.size }}</p>
                         </div>
                         <div class="description">
                             <h3>{{exercise.name}}</h3>
@@ -72,6 +63,7 @@ layout: routine
                 <button class="btn btn-secondary" id="btn__restart"><i class="fas fa-sync-alt"></i></button>
         </div>
         </div>
+        <a id="skip-exercise" class="text-secondary" href="Javascript:void(0)">Skip Exercise</a>
     </div>
   </div>
 
