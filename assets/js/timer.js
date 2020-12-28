@@ -49,11 +49,19 @@ $( document ).ready(function() {
 		EXERCISE_CAROUSEL.on("slid.bs.carousel", function () {
 			currentCarouselDurationCount = getCurrentExerciseAttribute("data-duration");
 			currentCarouselIndexOrder = getCurrentExerciseAttribute("data-order");
-
+			var currentExerciseReps = getCurrentExerciseAttribute("data-reps");
 			// only go to next slide if it is not the last slide
+			if (currentExerciseReps) {
+				COUNTDOWN_SECONDS.innerHTML = currentExerciseReps;
+			}
+
 			if(currentCarouselIndexOrder + 1 !== EXERCISE_CAROUSEL_ITEMS.length) {
-				COUNTDOWN_SECONDS.innerHTML = currentCarouselDurationCount;
-				startExerciseCountDown(0, currentCarouselDurationCount);
+				if (!currentExerciseReps) {
+					COUNTDOWN_SECONDS.innerHTML = currentCarouselDurationCount;
+					startExerciseCountDown(0, currentCarouselDurationCount);
+				}
+			} else {
+				$(".countdown__seconds").remove();
 			}
 		});
 

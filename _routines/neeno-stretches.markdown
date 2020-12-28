@@ -8,4 +8,5 @@ exercises:
       duration: 50
       image_path: false
       image_url: false
+      reps: 5
 ---
