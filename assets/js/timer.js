@@ -47,6 +47,7 @@ $( document ).ready(function() {
 		startExerciseCountDown(0, currentCarouselDurationCount);
 
 		EXERCISE_CAROUSEL.on("slid.bs.carousel", function () {
+			clearInterval (currentTimerInterval);
 			currentCarouselDurationCount = getCurrentExerciseAttribute("data-duration");
 			currentCarouselIndexOrder = getCurrentExerciseAttribute("data-order");
 			var currentExerciseReps = getCurrentExerciseAttribute("data-reps");
