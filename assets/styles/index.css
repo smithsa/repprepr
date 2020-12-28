@@ -58,7 +58,7 @@ body {
 	position: relative;
 }
 
-.img-wrapper.has-image{
+.img-wrapper.has-no-image{
 	min-height: 420px;
 	background: #3B3B98;
 	color:#ffffff;

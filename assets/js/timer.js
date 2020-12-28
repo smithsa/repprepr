@@ -4,7 +4,7 @@ var EXERCISE_CAROUSEL_ITEMS = $(".carousel-item");
 var currentCarouselDurationCount;
 var IS_PAUSED = true;
 var IS_RESTARTED = false;
-var endingExerciseAudio = new Audio("./../assets/audio/gong.wav");
+var endingExerciseAudio = document.getElementById("audio");
 var currentTimerInterval;
 
 EXERCISE_CAROUSEL.carousel({
