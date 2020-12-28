@@ -28,8 +28,8 @@ layout: routine
                 {% assign currentHumanReadableIndex = 1 %}
                 {% for exercise in page.exercises %}
                     <div class="carousel-item"  data-reps="{{exercise.reps}}"  data-duration="{{exercise.duration}}" data-order="{{exerciseOrder}}">
-                        <div class="img-wrapper" data-has-image="{{ exercise.image_path or exercise.image_url }}">
                             {% if exercise.image_path or exercise.image_url %}
+                                <div class="img-wrapper has-image">
                                 {% if exercise.image_path %}
                                     <img src="{{site.baseurl}}/assets/images{{page.id}}/{{exercise.image_path}}" class="d-block w-100" alt="...">
                                 {% endif %}
@@ -38,6 +38,7 @@ layout: routine
                                     <img src="{{exercise.image_url}}" />
                                 {% endif %}
                             {% else %}   
+                                <div class="img-wrapper">
                                 <h1>{{exercise.name}}</h1> 
                                 <p>{{exercise.notes}}</p>
                             {% endif %}
@@ -53,8 +54,8 @@ layout: routine
 
                     {% if exercise.mirror %}
                         <div class="carousel-item mirror"  data-reps="{{exercise.reps}}" data-duration="{{exercise.duration}}" data-order="{{exerciseOrder | plus: 1}}">
-                            <div class="img-wrapper" data-has-image="{{ exercise.image_path or exercise.image_url }}">
                                 {% if exercise.image_path or exercise.image_url %}
+                                    <div class="img-wrapper has-image">
                                     {% if exercise.image_path %}
                                         <img src="{{site.baseurl}}/assets/images{{page.id}}/{{exercise.image_path}}" class="d-block w-100" alt="...">
                                     {% endif %}
@@ -62,7 +63,8 @@ layout: routine
                                     {% if exercise.image_url %}
                                         <img src="{{exercise.image_url}}" />
                                     {% endif %}
-                                {% else %}    
+                                {% else %}
+                                    <div class="img-wrapper">     
                                     <h1>{{exercise.name}}</h1> 
                                     <p>{{exercise.notes}}</p>
                                 {% endif %}
