@@ -31,7 +31,7 @@ layout: routine
                         <div class="img-wrapper" data-has-image="{{ exercise.image_path or exercise.image_url }}">
                             {% if exercise.image_path or exercise.image_url %}
                                 {% if exercise.image_path %}
-                                    <img src="{{site.baseurl}}/assets/images/exercises/{{exercise.image_path}}" class="d-block w-100" alt="...">
+                                    <img src="{{site.baseurl}}/assets/images{{page.id}}/{{exercise.image_path}}" class="d-block w-100" alt="...">
                                 {% endif %}
 
                                 {% if exercise.image_url %}
@@ -56,7 +56,7 @@ layout: routine
                             <div class="img-wrapper" data-has-image="{{ exercise.image_path or exercise.image_url }}">
                                 {% if exercise.image_path or exercise.image_url %}
                                     {% if exercise.image_path %}
-                                        <img src="{{site.baseurl}}/assets/images/exercises/{{exercise.image_path}}" class="d-block w-100" alt="...">
+                                        <img src="{{site.baseurl}}/assets/images{{page.id}}/{{exercise.image_path}}" class="d-block w-100" alt="...">
                                     {% endif %}
 
                                     {% if exercise.image_url %}
