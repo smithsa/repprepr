@@ -91,6 +91,7 @@ function startExerciseCountDown(exerciseSecondsPassed, exerciseDurationInSeconds
 		// stop the interval timer
 		if (exerciseSecondsPassed == exerciseDurationInSeconds) {
 			clearInterval (currentTimerInterval);
+			endingExerciseAudio.muted = false;
 			endingExerciseAudio.play();
 			// navigate to the next slide and start new countdown
 			var nextSlideTimeout = setTimeout(function(){ 
