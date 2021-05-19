@@ -66,6 +66,7 @@ body {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	flex-wrap: wrap;
 }
 
 .carousel.paused .carousel-item .img-wrapper::after {
@@ -109,6 +110,8 @@ body {
 
 .carousel p {
 	font-size: 12px;
+	flex-basis: 100%;
+    text-align: center;
 }
 
 .carousel .description {
@@ -117,6 +120,10 @@ body {
 	padding-top: 20px;
 	padding-bottom: 10px;
 	background: #ffffff;
+}
+
+.carousel .description p {
+	text-align: left;
 }
 
 .carousel-item .rest {
@@ -223,4 +230,8 @@ body {
 
 #btn__start:hover {
 	transform: translateY(-50%), scale(1.2);
+}
+
+h1 {
+	text-align: center;
 }
